@@ -24,15 +24,11 @@ public enum Planeta {
 	}
 	
 	private double gravity() {
-		double gravity = 0d;
-		gravity = g * (getMasa()/getRadio());
-		return gravity; 
+		return g * (getMasa()/getRadio());
 	}
 
 	public double pesoSuperficie(double peso) {
-		double pesoSuperfice = 0d;
-		pesoSuperfice = peso * gravity();
-		return pesoSuperfice;
+		return peso * gravity();
 	}
 
 }
