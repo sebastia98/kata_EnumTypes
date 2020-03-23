@@ -33,7 +33,7 @@ public enum Planeta {
 	}
 
 	public double pesoSuperficie(double peso) {
-		return peso * gravity();
+		return masaTerricola(peso) * gravity();
 	}
 
 }
