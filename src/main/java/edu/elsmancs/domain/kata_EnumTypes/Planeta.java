@@ -36,4 +36,14 @@ public enum Planeta {
 		return masaTerricola(peso) * gravity();
 	}
 
+	Object getPlanetasTerrestres() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	Object getGigantesGaseosos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
