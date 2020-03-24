@@ -10,7 +10,7 @@ public enum Planeta {
 	private double masa = 0d;
 	private double radio = 0d;
 	private final double g = 6.67300E-11;
-	private ArrayList<Planeta> planetasTerrestres = new ArrayList<Planeta>();
+	private List<Planeta> planetasTerrestres = new ArrayList<Planeta>();
 	
 	private Planeta(double masa, double radio) {
 		
@@ -39,18 +39,15 @@ public enum Planeta {
 		return masaTerricola(peso) * gravity();
 	}
 	
-	public ArrayList<Planeta> getPlanetasTerrestres() {
+	public List<Planeta> getPlanetasTerrestres() {
 		for (Planeta planeta : Planeta.values()) {
 			if (planeta.ordinal() <= 3) {
 				this.planetasTerrestres.add(planeta);
 			}
-		return this.planetasTerrestres;
 		}
+		return this.planetasTerrestres;
 	}
 
-	Object getGigantesGaseosos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 }
