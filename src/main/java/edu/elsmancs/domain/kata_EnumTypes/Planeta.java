@@ -1,5 +1,7 @@
 package edu.elsmancs.domain.kata_EnumTypes;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public enum Planeta {
 	
@@ -8,6 +10,7 @@ public enum Planeta {
 	private double masa = 0d;
 	private double radio = 0d;
 	private final double g = 6.67300E-11;
+	private ArrayList<Planeta> planetasTerrestres = new ArrayList<Planeta>();
 	
 	private Planeta(double masa, double radio) {
 		
@@ -35,10 +38,14 @@ public enum Planeta {
 	public double pesoSuperficie(double peso) {
 		return masaTerricola(peso) * gravity();
 	}
-
-	Object getPlanetasTerrestres() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public ArrayList<Planeta> getPlanetasTerrestres() {
+		for (Planeta planeta : Planeta.values()) {
+			if (planeta.ordinal() <= 3) {
+				this.planetasTerrestres.add(planeta);
+			}
+		return this.planetasTerrestres;
+		}
 	}
 
 	Object getGigantesGaseosos() {
